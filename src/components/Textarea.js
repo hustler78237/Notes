@@ -1,6 +1,6 @@
 function Textarea() {
     return (
-        <div>
+        <div className="">
             Hello world123
         </div>
     )
