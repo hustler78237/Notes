@@ -1,10 +1,10 @@
 import './App.css';
+import Show from './parentcopycomponents/Show';
+
 
 function App() {
   return (
-    <div className='text-red-700'>
-      hello world
-    </div>
+    <Show/>
   );
 }
 

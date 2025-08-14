@@ -1,4 +1,4 @@
-function Page() {
+function Textarea() {
     return (
         <div>
             Hello world123
@@ -6,4 +6,4 @@ function Page() {
     )
 }
 
-export default Page;
+export default Textarea;
