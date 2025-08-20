@@ -4,15 +4,15 @@ import Textarea from "../components/Textarea";
 
 function Show() {
     return (
-        <div className="flex flex-row h-dvh">
-            <div className="basis-1/4  bg-[#14152a]">
+        <div className="flex flex-col h-dvh md:flex-row ">
+            <div className="md:basis-1/4  bg-[#14152a] ">
                 <Navbar />
             </div>
-            <div className="flex flex-col basis-3/4">
-                <div className="basis-4/5  bg-[#0d111c]">
+            <div className="flex flex-col flex-1">
+                <div className="flex-1 bg-[#0d111c] overflow-auto">
                     <Textarea />
                 </div>
-                <div className="basis-1/5  bg-[#0d111c] text-[#ffffff] ">
+                <div className="flex-none bg-[#0d111c] text-[#ffffff] p-8 ">
                     <ButtonArea />
                 </div>
             </div>
