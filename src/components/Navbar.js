@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
 
@@ -20,7 +20,7 @@ function Navbar() {
             >
                 {/* Menu items */}
                 <div className="flex flex-row md:flex-col gap-2 w-full">
-                    <p onClick={() => {setActive(1); navigate("/")}}
+                    <p onClick={() => {setActive(1); navigate("/");}}
                         className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
                         ${active === 1 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
                         Textarea
@@ -38,7 +38,7 @@ function Navbar() {
                     <p onClick={() => setActive(4)}
                         className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
                         ${active === 4 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
-                        Sign Up
+                        SignUp
                     </p>
                 </div>
 
