@@ -7,12 +7,51 @@ function Navbar() {
 
     return (
         <form>
-            <div className="flex flex-row md:flex-col items-center   box-border  text-[#ffffff]  h-full  cursor-pointer overflow-auto relative">
-                <p onClick={() => setActive(active = 1)} className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-4 py-2  rounded-lg transition active:scale-95 text-sm sm:text-base  ${active === 1 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] w-full text-center" : ""}`}>Textarea</p>
-                <p onClick={() => setActive(active = 2)} className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-4 py-2 rounded-lg  transition active:scale-95 text-sm sm:text-base  ${active === 2 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] w-full text-center" : ""} `}>History</p>
-                <p onClick={() => setActive(active = 3)} className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-4 py-2 rounded-lg  transition active:scale-95 text-sm sm:text-base  ${active === 3 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] w-full text-center" : ""}`}>Login</p>
-                <p onClick={() => setActive(active = 4)} className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-4 py-2 rounded-lg transition active:scale-95 text-sm sm:text-base  ${active === 4 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] w-full text-center" : ""}`}>Sign Up</p>
-                <button className="  mt-2 bg-gradient-to-r from-[#2a1452] to-[#4a128c] mb-4 px-4 py-2 rounded-lg transition active:scale-95 text-sm sm:text-base ">LogOut</button>
+            <div
+                className="
+                    flex md:flex-col
+                    items-center
+                    bg-[#14152a] text-white
+                    h-16 md:h-dvh  
+                    px-2
+                "
+            >
+                {/* Menu items */}
+                <div className="flex flex-row md:flex-col gap-2 w-full">
+                    <p onClick={() => setActive(1)}
+                        className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
+                        ${active === 1 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
+                        Textarea
+                    </p>
+                    <p onClick={() => setActive(2)}
+                        className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
+                        ${active === 2 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
+                        History
+                    </p>
+                    <p onClick={() => setActive(3)}
+                        className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
+                        ${active === 3 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
+                        Login
+                    </p>
+                    <p onClick={() => setActive(4)}
+                        className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
+                        ${active === 4 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
+                        Sign Up
+                    </p>
+                </div>
+
+                {/* Logout button */}
+                <button
+                    className="
+                        ml-auto md:ml-0   
+                        mt-0 md:mt-auto   
+                        bg-gradient-to-r from-[#2a1452] to-[#4a128c]
+                        px-4 py-2 rounded-lg transition active:scale-95
+                        md:mb-4
+                    "
+                >
+                    LogOut
+                </button>
             </div>
         </form>
     );
