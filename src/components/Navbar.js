@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate} from "react-router-dom";
 
 function Navbar() {
 
     let [active, setActive] = useState(0);
+    const navigate = useNavigate();
     // const [open, setOpen] = useState(false);
 
     return (
@@ -18,7 +20,7 @@ function Navbar() {
             >
                 {/* Menu items */}
                 <div className="flex flex-row md:flex-col gap-2 w-full">
-                    <p onClick={() => setActive(1)}
+                    <p onClick={() => {setActive(1); navigate("/")}}
                         className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
                         ${active === 1 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
                         Textarea
@@ -28,7 +30,7 @@ function Navbar() {
                         ${active === 2 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
                         History
                     </p>
-                    <p onClick={() => setActive(3)}
+                    <p onClick={() => {setActive(3); navigate("/Login")}}
                         className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
                         ${active === 3 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
                         Login
