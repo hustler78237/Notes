@@ -35,7 +35,7 @@ function Navbar() {
                         ${active === 3 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
                         Login
                     </p>
-                    <p onClick={() => setActive(4)}
+                    <p onClick={() => {setActive(4); navigate("/Sign")}}
                         className={`hover:bg-gradient-to-r from-[#2a1452] to-[#4a128c] px-3 py-2 rounded-lg transition active:scale-95 
                         ${active === 4 ? "bg-gradient-to-r from-[#2a1452] to-[#4a128c] text-center" : ""}`}>
                         SignUp
