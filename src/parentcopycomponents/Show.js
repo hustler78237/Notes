@@ -39,7 +39,7 @@ function Show() {
                     <Textarea text={text} setText={setText} title={title} setTitle={setTitle} />
                 </div>
                 <div className="flex-none bg-[#0d111c] text-[#ffffff] p-8 ">
-                    <ButtonArea text={text} setText={setText} />
+                    <ButtonArea text={text} setText={setText} title={title} setTitle={setTitle} />
                 </div>
             </div>
         </div>
