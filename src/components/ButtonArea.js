@@ -1,7 +1,5 @@
 function ButtonArea ({text, setText}){
 
-    
-
     function LowerCase(){
        setText(text.toLowerCase());
     }

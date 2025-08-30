@@ -7,16 +7,27 @@ import { useEffect } from "react";
 function Show() {
 
     // this logic for storing textarea in localStorage of browser
-      const [text , setText] = useState(() => {
+    const [text, setText] = useState(() => {
         let savedText = localStorage.getItem("text");
         return savedText ? JSON.parse(savedText) : "";
-      })
+    })
+
+    // this logic for storing title in localStorage of browser
+    const [title, setTitle] = useState(() => {
+        let savedTile = localStorage.getItem("Title");
+        return savedTile ? JSON.parse(savedTile) : "";
+    })
+
+    useEffect(() => {
+        localStorage.setItem("text", JSON.stringify(text))
+    }, [text])
 
 
-     useEffect(()=>{
-      localStorage.setItem("text" , JSON.stringify(text))
-     },[text])
-  
+
+    useEffect(() => {
+        localStorage.setItem("Title", JSON.stringify(title));
+    }, [title])
+
 
     return (
         <div className="flex flex-col h-dvh md:flex-row ">
@@ -25,10 +36,10 @@ function Show() {
             </div>
             <div className="flex flex-col flex-1">
                 <div className="flex-1 bg-[#0d111c] overflow-auto">
-                    <Textarea  text ={text} setText = {setText}/>
+                    <Textarea text={text} setText={setText} title={title} setTitle={setTitle} />
                 </div>
                 <div className="flex-none bg-[#0d111c] text-[#ffffff] p-8 ">
-                    <ButtonArea text = {text} setText ={setText} />
+                    <ButtonArea text={text} setText={setText} />
                 </div>
             </div>
         </div>

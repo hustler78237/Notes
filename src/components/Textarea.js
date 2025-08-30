@@ -1,17 +1,7 @@
-import { useState, useEffect } from "react";
 
-function Textarea({text , setText}) {
 
-  // this logic for storing title in localStorage of browser
-  const[title, setTitle] = useState(()=>{
-    let savedTile = localStorage.getItem("Title");
-    return savedTile ? JSON.parse(savedTile) : "";
-  })
-  
+function Textarea({text , setText ,title , setTitle}) {
 
-  useEffect(()=>{
-    localStorage.setItem("Title", JSON.stringify(title));
-  },[title])
   
 
 
